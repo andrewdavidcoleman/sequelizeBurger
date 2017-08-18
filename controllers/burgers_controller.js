@@ -1,6 +1,22 @@
-var express = require("express");
-var router = express.Router();
-var burger = require("../models/burger.js");
+var db = require("../models");
+
+module.exports = function(app) {
+  // GET route
+  app.get("/", function(req, res) {
+    res.redirect("/burgers");
+  });
+
+  app.get("/burgers", function(req, res) {
+    db.Burgers.findAll({}).then(function(dbBurgers) {
+      res.json(dbTodo);
+    })
+  });
+}
+
+
+// var express = require("express");
+// var router = express.Router();
+// var burger = require("../models/burger.js");
 
 // get
 router.get("/", function(req, res){
