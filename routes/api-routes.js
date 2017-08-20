@@ -6,10 +6,6 @@ var db = require("../models");
 // =============================================================
 module.exports = function(app) {
 
-  app.get("/", function(req, res) {
-    res.redirect("/burgers");
-  });
-
   // GET route for getting all of the posts
   app.get("/api/burgers/", function(req, res) {
     db.Burgers.findAll({})
