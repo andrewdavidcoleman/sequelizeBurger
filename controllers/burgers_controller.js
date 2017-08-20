@@ -1,17 +1,23 @@
-var db = require("../models");
+// I don't think I need this entire file. Is it correct to say that Sequelize effectively IS my controller in the MVC architecture?
 
-module.exports = function(app) {
-  // GET route
-  app.get("/", function(req, res) {
-    res.redirect("/burgers");
-  });
 
-  app.get("/burgers", function(req, res) {
-    db.Burgers.findAll({}).then(function(dbBurgers) {
-      res.json(dbTodo);
-    })
-  });
-}
+
+
+
+// var db = require("../models");
+//
+// module.exports = function(app) {
+//   // GET route
+//   app.get("/", function(req, res) {
+//     res.redirect("/burgers");
+//   });
+//
+//   app.get("/burgers", function(req, res) {
+//     db.Burgers.findAll({}).then(function(dbBurgers) {
+//       res.json(dbTodo);
+//     })
+//   });
+// }
 
 
 // var express = require("express");
