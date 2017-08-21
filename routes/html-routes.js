@@ -12,8 +12,8 @@ module.exports = function(app) {
     res.redirect("/burgers");
   });
 
-  app.get("/burgers/", function(req, res) {
-    res.sendFile(path.join(__dirname, "../views/layouts/main.handlebars"));
+  app.get("/burgers", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/views/layouts/main.handlebars"));
   });
 
 };
